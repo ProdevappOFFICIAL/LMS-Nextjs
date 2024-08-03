@@ -1,0 +1,260 @@
+{
+ "(SELECT A YEAR)": [
+   {
+     "category": "Math",
+     "type": "multiple",
+     "difficulty": "easy",
+     "question": "select a year",
+     "correct_answer": "4",
+     "incorrect_answers": ["3", "5", "6"]
+   }
+ ],
+ "UTME - 2000": [
+
+    {
+      "category": "Math",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "A man wishes to keep some money in a savings deposit at 25% compound interest so that after 3 years he can buy a car for ₦150 000. How much does he need to deposit now?",
+      "correct_answer": "₦85 714.28",
+      "incorrect_answers": ["₦76 800.00", "₦96 000.00", "₦112 000.50"]
+     
+    },
+    {
+      "category": "Math",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Simplify",
+      "correct_answer": "2n + 1",
+      "incorrect_answers": ["2n – 1", "4", "¼"],
+      "img": "/exam/mat2000/mat2.jpg"
+    },
+    {
+      "category": "Math",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Evaluate",
+      "correct_answer": "1",
+      "incorrect_answers": ["8", "", ""],
+      "img": "/exam/mat2000/mat3.jpg"
+    },
+    {
+      "category": "Math",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Let P = {1, 2, u, v, w, x} Q = {2, 3, u, v, w, 5, 6, y} and R = {2, 3, 4, v, x, y}. Determine (P – Q) ∩ R.",
+      "correct_answer": "{1, x}",
+      "incorrect_answers": ["", "{x, y}", "{x}"]
+      
+    },
+    {
+      "category": "Math",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "If x = m + n, find the values of m and n respectively.",
+      "correct_answer": "2/5, 1",
+      "incorrect_answers": ["1, -2", "-2, 1", "2, 3/5"],
+      "img": "/exam/mat2000/mat5.jpg"
+    },
+    {
+      "category": "Math",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Audu bought an article for ₦50,000 and sold it to Femi at a loss of x%. Femi later sold the article to Oche at a profit of 40%. If Femi made a profit of ₦10,000, find the value of x.",
+      "correct_answer": "20",
+      "incorrect_answers": ["40", "50", "60"]
+      
+    },
+    {
+      "category": "Math",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "In a youth club with 94 members, 60 like modern music and 50 like traditional music. The number of members who like both traditional and modern music is three times those who do not like any type of music. How many members like only one type of music?",
+      "correct_answer": "62",
+      "incorrect_answers": ["86", "24", "8"]
+      
+    },
+    {
+      "category": "Math",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "If P3446 – 23P26 = 2PP26, find the value of digit P.",
+      "correct_answer": "5",
+      "incorrect_answers": ["4", "3", "2"]
+      
+    },
+    {
+      "category": "Math",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Evaluate, reducing each number to two significant figures and leaving your answer in two significant figures.",
+      "correct_answer": "0.54",
+      "incorrect_answers": ["0.054", "0.055", "0.056"]
+      
+    },
+    {
+      "category": "Math",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "If the population of a town was 240,000 in January 1998 and it increased by 2% each year, what would be the population of the town in January 2000?",
+      "correct_answer": "249 600",
+      "incorrect_answers": ["244 800", "249 696", "480 000"]
+      
+    },
+    {
+      "category": "Math",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "If 31410 – 2567 = 2PP26, find the value of digit P.",
+      "correct_answer": "4",
+      "incorrect_answers": ["5", "3", "2"]
+     
+    },
+    {
+      "category": "Math",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "A matrix P is such that PT = -P, where PT is the transpose of P. If b = 1, then P is",
+      "correct_answer": "",
+      "incorrect_answers": ["", "", ""]
+      
+    },
+    {
+      "category": "Math",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Solve the inequality 2 – x > x²",
+      "correct_answer": "-2 < x < 1",
+      "incorrect_answers": ["x > 2 or x < -1", "x < 2 or x > 1", "-1 < x < 2"]
+      
+    },
+    {
+      "category": "Math",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Evaluate",
+      "correct_answer": "-1",
+      "incorrect_answers": ["", "0", ""]
+      
+    },
+    {
+      "category": "Math",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Evaluate",
+      "correct_answer": "-1",
+      "incorrect_answers": ["", "0", ""]
+      
+    } ,
+    {
+      "category": "Math",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Evaluate",
+      "correct_answer": "-1",
+      "incorrect_answers": ["", "0", ""]
+      
+    }    
+   
+ ],
+ "UTME - 2001": [
+  {
+    "category": "Math",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "A man wishes to keep some money in a savings deposit at 25% compound interest so that after 3 years he can buy a car for ₦150 000. How much does he need to deposit now?",
+    "correct_answer": "4",
+    "incorrect_answers": ["3", "5", "6"]
+  }
+ ],
+ "UTME - 2002": [
+  {
+    "category": "Math",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "A man wishes to keep some money in a savings deposit at 25% compound interest so that after 3 years he can buy a car for ₦150 000. How much does he need to deposit now?",
+    "correct_answer": "4",
+    "incorrect_answers": ["3", "5", "6"]
+  }
+ ],
+ "UTME - 2003": [
+  {
+    "category": "Math",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "A man wishes to keep some money in a savings deposit at 25% compound interest so that after 3 years he can buy a car for ₦150 000. How much does he need to deposit now?",
+    "correct_answer": "4",
+    "incorrect_answers": ["3", "5", "6"]
+  }
+ ],
+ "UTME - 2004": [
+  {
+    "category": "Math",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "A man wishes to keep some money in a savings deposit at 25% compound interest so that after 3 years he can buy a car for ₦150 000. How much does he need to deposit now?",
+    "correct_answer": "4",
+    "incorrect_answers": ["3", "5", "6"]
+  }
+ ],
+ "UTME - 2005": [
+  {
+    "category": "Math",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "A man wishes to keep some money in a savings deposit at 25% compound interest so that after 3 years he can buy a car for ₦150 000. How much does he need to deposit now?",
+    "correct_answer": "4",
+    "incorrect_answers": ["3", "5", "6"]
+  }
+ ],
+ "UTME - 2006": [
+  {
+    "category": "Math",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "A man wishes to keep some money in a savings deposit at 25% compound interest so that after 3 years he can buy a car for ₦150 000. How much does he need to deposit now?",
+    "correct_answer": "4",
+    "incorrect_answers": ["3", "5", "6"]
+  }
+ ],
+ "UTME - 2007": [
+  {
+    "category": "Math",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "A man wishes to keep some money in a savings deposit at 25% compound interest so that after 3 years he can buy a car for ₦150 000. How much does he need to deposit now?",
+    "correct_answer": "4",
+    "incorrect_answers": ["3", "5", "6"]
+  }
+ ],
+ "UTME - 2008": [
+  {
+    "category": "Math",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "A man wishes to keep some money in a savings deposit at 25% compound interest so that after 3 years he can buy a car for ₦150 000. How much does he need to deposit now?",
+    "correct_answer": "4",
+    "incorrect_answers": ["3", "5", "6"]
+  }
+ ],
+ "UTME - 2009": [
+  {
+    "category": "Math",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "A man wishes to keep some money in a savings deposit at 25% compound interest so that after 3 years he can buy a car for ₦150 000. How much does he need to deposit now?",
+    "correct_answer": "4",
+    "incorrect_answers": ["3", "5", "6"]
+  }
+ ],
+ "UTME - 2010": [
+  {
+    "category": "Math",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "A man wishes to keep some money in a savings deposit at 25% compound interest so that after 3 years he can buy a car for ₦150 000. How much does he need to deposit now?",
+    "correct_answer": "4",
+    "incorrect_answers": ["3", "5", "6"]
+  }
+ ]
+}
