@@ -48,15 +48,17 @@ const Coursepage: React.FC = () => {
 
   return (
     <div className="flex flex-col ml-1">
-      <div className="flex flex-row my-2  p-5 items-center">
-        <div className="w-[350px]  text-xl font-semibold tracking-tight transition-colors first:mt-0">
-          Practice Courses
+      <div className="flex flex-row my-2  p-5 items-start sm:items-center">
+        <div className=" px-3 py-1 rounded-full  text-white bg-green-600 text-sm sm:text-xl tracking-tight transition-colors first:mt-0">
+          Courses
         </div>
         <div className='w-full'/>
-        <div className="flex  gap-x-3 items-center font-sans">
-            <div>
+        <div className="flex  flex-col sm:flex-row  gap-x-3 items-end sm:items-center ">
+
+          
+ <div>
               <select
-                className="flex h-10 w-[60px] sm:w-fit items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+                className="flex h-10 w-[100px] sm:w-fit items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
                 value={selectedCategory}
                 onChange={handleCategoryChange}
               >
@@ -69,7 +71,7 @@ const Coursepage: React.FC = () => {
             </div>
             <div>
               <select
-                className="flex h-10 w-[60px] sm:w-fit items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+                className="flex h-10 w-fit mt-3 sm:mt-0 items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
                 value={selectedQuiz}
                 onChange={handleQuizChange}
               >
@@ -80,34 +82,37 @@ const Coursepage: React.FC = () => {
                 ))}
               </select>
             </div>
-            <div className="flex py-3 gap-x-3 items-center font-sans">
+          
+           
+            <div className="flex py-3 gap-x-3 items-center ">
               <input
                 type="text"
                 placeholder="Search questions..."
-                className="flex h-10 w-[60px] sm:w-fit items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+                className="flex h-10 w-fit items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
             </div>
           </div>
       </div>
-      <Separator />
-      <div className="w-full h-10 bg-yellow-200/20 justify-center dark:bg-yellow-200/20">
-        <div className="flex flex-row items-center px-5 pt-1">
-          <BellRing className="dark:text-white w-6 h-6" />
+      
+      <div className="w-full flex-col h-10 ml-4 sm:ml-0 bg-yellow-200/20 justify-center dark:bg-yellow-200/20">
+        <Separator />
+        <div className="flex flex-row w-full items-center px-5 pt-1 pb-0 sm:pb-3">
+          <BellRing className="dark:text-white w-4 sm:w-6 h-4 sm:h-6 " />
           <div className="w-3" />
-          <div className="w-[400px] text-black font-sans text-sm dark:text-white">
-            Welcome to LearnWithUncleTee version 1.0.1
+          <div className=" w-4/5 sm:w-[400px] text-black   text-sm dark:text-white">
+            Welcome to LearnWithUncleTee
           </div>
-          <div className="w-full"/>
-          <p className="font-sans text-sm px-2 py-1 rounded-full bg-green-200/20 text-black">
+          <div className=" w-auto sm:w-full "/>
+          <p className=" w-1/5  text-sm px-2 py-1 rounded-full bg-green-200/20 text-black">
             v1.01
           </p>
         </div>
       </div>
       <div className="h-5" />
       <div className="flex flex-col px-10">
-        <div className='font-sans'>
+        <div className=''>
           <h2 className="text-2xl mb-3">Questions</h2>
           <div className='border-t-green-600 border-[2px] rounded-sm shadow-sm'>
             {filteredQuestions.length > 0 ? (

@@ -69,15 +69,15 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="flex flex-col ml-1 font-sans">
+    <div className="flex flex-col ml-1 ">
       <div className="flex flex-row my-2 p-5">
-        <div className="w-fit sm:w-[250px] px-5 text-xl font-semibold tracking-tight transition-colors first:mt-0">
-          Welcome back
+        <div className="w-[250px] px-5 text-xl font-semibold tracking-tight transition-colors first:mt-0">
+          Welcome
         </div>
         <div>
           <select
             className={cn(
-              "flex h-10 w-[60px] sm:w-fit items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1"
+              "flex h-10 w-[100px] sm:w-fit items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1"
             )}
             value={selectedCategory}
             onChange={(e) => setSelectedCategory(e.target.value)}
@@ -136,7 +136,7 @@ const Dashboard = () => {
                     <div className="mt-5">
                       <Input
                         defaultValue={'utcc-elearn://raw-json/{file-config}'}  
-                        className="bg-sky-200/20 font-sans" />
+                        className="bg-sky-200/20 " />
                     </div>
                   </DialogDescription>
                 </DialogHeader>
@@ -167,33 +167,33 @@ const Dashboard = () => {
 
       <div className="w-full flex-col h-10 ml-4 sm:ml-0 bg-yellow-200/20 justify-center dark:bg-yellow-200/20">
         <Separator />
-        <div className="flex flex-row items-center px-5 pt-1">
+        <div className="flex flex-row w-full items-center px-5 pt-1 pb-0 sm:pb-3">
           <BellRing className="dark:text-white w-6 h-6" />
           <div className="w-3" />
-          <div className="w-[400px] text-black font-sans text-sm dark:text-white">
-            Welcome to LearnWithUncleTee version 1.0.1
+          <div className=" w-4/5 sm:w-[400px] text-black   text-sm dark:text-white">
+            Welcome to LearnWithUncleTee
           </div>
-          <div className="w-full"/>
-          <p className="font-sans text-sm px-2 py-1 rounded-full bg-green-200/20 text-black">
+          <div className=" w-auto sm:w-full "/>
+          <p className=" w-1/5  text-sm px-2 py-1 rounded-full bg-green-200/20 text-black">
             v1.01
           </p>
         </div>
       </div>
       <div className="h-5"/>
-      <div className="flex flex-row lg:justify-between mx-7 sm:mx-14">
+      <div className="flex  flex-col gap-x-4  sm:flex-row mt-5 sm:mt-0  lg:justify-between mx-7 sm:mx-14">
         <Dialog>
           <DialogTrigger asChild>
-            <Card className="h-28 w-[350px] bg-green-200 dark:bg-green-800 font-sans mr-5 sm:mr-0">
+            <Card className="h-28 w-full sm::w-[350px] bg-green-200 dark:bg-green-800  mr-5 sm:mr-0">
               <CardHeader>
                 <CardTitle>Start Exam</CardTitle>
-                <CardDescription className="invisible sm:visible">
+                <CardDescription className="">
                   Start a 60 questions Exam on any desired Subject
                 </CardDescription>
               </CardHeader>
               <CardContent></CardContent>
             </Card>
           </DialogTrigger>
-          <DialogContent className="sm:max-w-[425px] font-sans">
+          <DialogContent className="sm:max-w-[425px] ">
             <DialogHeader>
               <DialogTitle>Start Exam</DialogTitle>
               <DialogDescription>
@@ -229,20 +229,20 @@ const Dashboard = () => {
             </DialogFooter>
           </DialogContent>
         </Dialog>
-    
+        <div className="h-5"/>
         <Dialog>
           <DialogTrigger asChild>
-          <Card className="h-28 w-[350px] bg-sky-200 dark:bg-sky-800 mr-5 sm:mr-0">
+          <Card className="h-28 w-full sm::w-[350px] bg-sky-200 dark:bg-sky-800 mr-5 sm:mr-0">
               <CardHeader>
                 <CardTitle>Random Exam</CardTitle>
-                <CardDescription className="invisible sm:visible">
+                <CardDescription className="">
                   Start a random 60 questions on every subject
                 </CardDescription>
               </CardHeader>
               <CardContent></CardContent>
             </Card>
           </DialogTrigger>
-          <DialogContent className="rounded-xl sm:max-w-[425px] font-sans">
+          <DialogContent className=" sm:max-w-[425px] ">
             <DialogHeader>
               <DialogTitle>Random Quiz</DialogTitle>
               <DialogDescription>
@@ -256,19 +256,20 @@ const Dashboard = () => {
             </DialogFooter>
           </DialogContent>
         </Dialog>
+        <div className="h-5"/>
         <Dialog>
           <DialogTrigger asChild>
-            <Card className="h-28 w-[350px] bg-red-200 dark:bg-red-800">
+            <Card className="h-28 w-full sm::w-[350px] bg-red-200 dark:bg-red-800">
               <CardHeader>
                 <CardTitle>Exam link</CardTitle>
-                <CardDescription className="invisible sm:visible">
+                <CardDescription className="">
                   Enter the Online URL for the Exam
                 </CardDescription>
               </CardHeader>
               <CardContent></CardContent>
             </Card>
           </DialogTrigger>
-          <DialogContent className="sm:max-w-[425px] font-sans">
+          <DialogContent className="sm:max-w-[425px] ">
             <DialogHeader>
               <DialogTitle>CBT Link</DialogTitle>
               <DialogDescription>

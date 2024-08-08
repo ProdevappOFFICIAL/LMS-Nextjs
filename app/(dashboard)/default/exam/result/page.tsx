@@ -49,45 +49,43 @@ const Result = () => {
 
   return (
     <>
-      <div className="ml-20 sm:ml-20 flex flex-col w-full h-full px-20 pt-5 text-black bg-white justify-center items-center">
+      <div className="ml-20 sm:ml-20 flex flex-col w-full h-full px-20 pt-5 text-black dark:text-white bg-white dark:bg-black justify-center items-center">
         <div className='w-[300px]'> 
           <h2 className="header">
             <div className='flex items-center justify-center rounded-full text-[52px] w-52 h-52 bg-zinc-200/20 border select-none pointer-events-none'>
               {overallPercentage}%
             </div>
             <div className='h-5'/>
-            <h1 className="text-xl font-semibold tracking-tight font-sans text-white">
-              Exam Ended
-            </h1>
+          
           </h2>
           <div className='h-5'/>
           <div className="details-holder">
-            <h3 className="text-[11px] text-muted-foreground font-sans">Your Score is: {score}/{questions.length}</h3>
-            <div className='h-5'/>
-            <h3 className="text-[11px] text-muted-foreground font-sans">You no sabi book</h3>
-            <div className='h-5'/>
-            <h3 className="text-[11px] text-muted-foreground font-sans">Your Performance</h3>
+    
+            <h3 className="text-[11px] text-muted-foreground ">Your Performance</h3>
             <Progress className={`${overallPercentage <= questions.length ? 'bg-red-600' : 'bg-white'}`} value={overallPercentage} />
             <div className='h-5'/>
-            <h3 className="text-[11px] text-muted-foreground font-sans">Average Performance</h3>
+            <h3 className="text-[11px] text-muted-foreground ">Average Performance</h3>
             <Progress value={50} />
               <div className="mt-5">
-                <h2 className="text-xl font-semibold tracking-tight font-sans text-white">
+                <h2 className="text-xl font-semibold tracking-tight  text-white">
                   Subject Grades
                 </h2>
                 {scores.map(({ category, correct, total, percentage }) => (
                   <div key={category} className="mt-2">
-                    <h3 className="text-md font-sans">{category}: {correct}/{total} ({percentage}%)</h3>
+                    <h3 className="text-md ">{category}: {correct}/{total} ({percentage}%)</h3>
                     <Progress value={percentage} />
                   </div>
                 ))}
               </div>
+
+
           </div>
           <div className='h-5'/>
         
         </div>
         <div className='h-5'/>
         <Button 
+        
           onClick={() => {
             router.push('/default');
             Reset();
@@ -97,7 +95,7 @@ const Result = () => {
         </Button>
         <div className="px-10">
           <div className="report-holder-top">
-            <h1 className="text-xl font-semibold tracking-tight font-sans text-white">
+            <h1 className="text-xl font-semibold tracking-tight  text-white">
               Questions
             </h1>
             <div className='flex'>Correct Option: <p className='ml-2 text-[9px] px-2 py-1 bg-green-600 rounded-sm text-white'>Correct Answer</p></div>
@@ -105,7 +103,7 @@ const Result = () => {
             <div className='flex'>Your Answer: <p className='ml-2  text-[9px] px-2 py-1 bg-red-600 rounded-sm text-white'>Your Answer</p></div>
           </div>
           <div className='h-5'/>
-          <Card className="p-5 bg-zinc-200/20 border">
+          <Card className=" p-5 bg-zinc-200/20 border">
             {questions.map((ques, qIndex) => (
               <div className="rounded-sm select-none pointer-events-none" key={qIndex}>
                 <div className="single-question select-none pointer-events-none">

@@ -19,7 +19,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { CalculatorIcon, ChevronLeft, Timer } from "lucide-react";
+import { CalculatorIcon, ChevronLeft, ChevronRight, Timer } from "lucide-react";
 import { useRouter } from "next/navigation";
 import Calculator from "../../_component/plugin.components/calculator";
 import { useEffect } from "react";
@@ -132,8 +132,8 @@ const ExamPage = () => {
   };
 
   return (
-    <div className="flex flex-col ml-1 h-[500px]">
-      <div className="flex flex-row p-5 my-2">
+    <div className="flex flex-col mr-2 ml-1 h-[500px]">
+      <div className=" flex-row hidden lg:flex  p-5 my-2">
         <div>
           <Button onClick={onClick} variant="outline" size="icon" className="bg-gray-200/20">
             <ChevronLeft className="h-[1.2rem] w-[1.2rem]" />
@@ -160,7 +160,7 @@ const ExamPage = () => {
         <div>
           <Button
             onClick={saveAndNextFunction}
-            className="dark:bg-black bg-blue-600 border rounded-lg pr-10 hover:bg-blue-400"
+            className="dark:bg-black dark:text-white bg-blue-600 border rounded-lg pr-10 hover:bg-blue-400"
           >
             <div className="h-[1.2rem] w-[5.0rem]">Save and Next</div>
           </Button>
@@ -169,7 +169,7 @@ const ExamPage = () => {
         <Dialog>
           <DialogTrigger asChild>
             <div>
-              <Button size="icon" className="bg-red-600 rounded-lg px-10 hover:bg-red-400">
+              <Button size="icon" className="bg-red-600 rounded-lg px-10 hover:bg-red-400 dark:text-white">
                 <div className="h-[1.2rem] w-[5.0rem]">Submit</div>
               </Button>
             </div>
@@ -223,9 +223,94 @@ const ExamPage = () => {
           </DialogContent>
         </Dialog>
       </div>
+      <div className=" flex-row flex lg:hidden   p-5 my-2">
+    
+        <div>
+          <Button
+            onClick={() => {
+              if (currentQuestion !== 0) {
+                markVisited();
+                setCurrentQuestion(currentQuestion - 1);
+              }
+            }}
+            variant="outline"
+            className="dark:bg-black text-white bg-blue-600 border rounded-lg hover:bg-blue-400 hover:text-white"
+          >
+                 <ChevronLeft className="h-[1.2rem] w-[1.2rem]" />
+          </Button>
+        </div>
+        
+        <div>
+          <Button
+            onClick={saveAndNextFunction}
+            className="dark:bg-black dark:text-white bg-blue-600 border rounded-lg  hover:bg-blue-400"
+          >
+                <ChevronRight className="h-[1.2rem] w-[1.2rem]" />
+          </Button>
+        </div>
+        <div className="w-full" />
+     
+        <div className="flex-row flex">
+          <Button size="icon" className="px-10 gap-y-1 bg-white dark:bg-black text-black dark:text-white">
+            <div className="h-[1.2rem] w-[5.0rem] mr-6">
+             
+            </div>
+            
+            <div className="h-[1.2rem] w-[5.0rem]">
+              {time.min < 10 ? "0" + time.min : time.min}:
+              {time.sec < 10 ? "0" + time.sec : time.sec}{" "}
+            </div>
+          </Button>
+        </div>
+        <div className="w-10" />
+        <Dialog>
+          <DialogTrigger asChild>
+            <div>
+              <Button variant="outline" size="icon">
+                <CalculatorIcon className="h-[1.2rem] w-[1.2rem]" />
+              </Button>
+            </div>
+          </DialogTrigger>
+          <DialogContent className="w-fit items-center  sm:max-w-[425px]">
+            <DialogHeader>
+              <DialogTitle>Calculator</DialogTitle>
+              <DialogDescription>
+                Simple Calculator
+                <div className="mt-5 w-fit">
+                  <Calculator />
+                </div>
+              </DialogDescription>
+            </DialogHeader>
+          </DialogContent>
+        </Dialog>
+        <div className="w-10" />
+
+        <Dialog>
+          <DialogTrigger asChild>
+            <div>
+              <Button size="icon" className="bg-red-600 rounded-lg px-10 hover:bg-red-400 dark:text-white">
+                <div className="h-[1.2rem] w-[5.0rem]">Submit</div>
+              </Button>
+            </div>
+          </DialogTrigger>
+          <DialogContent className="rounded-xl sm:max-w-[425px]">
+            <DialogHeader>
+              <DialogTitle>Submit</DialogTitle>
+              <DialogDescription>Are you sure you want to submit</DialogDescription>
+            </DialogHeader>
+            <DialogFooter className="sm:justify-end">
+              <DialogClose asChild>
+                <Button variant="destructive" type="submit" onClick={saveAndSubmit}>
+                  Submit
+                </Button>
+              </DialogClose>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
+      </div>
       <Separator />
       <div className="flex flex-col px-10 my-10 w-auto h-fit">
-        <Card className="h-full w-full">
+        <Card className="h-full w-full ">
           <CardHeader>
             <CardTitle>
               <div className="flex flex-row">
@@ -275,6 +360,25 @@ const ExamPage = () => {
 
           </div>
         </Card>
+
+        <div className="h-full w-full mt-2 visible sm:hidden shadow-none">
+            <CardDescription>
+             <div className=" mr-4">
+  <Image
+  className="select-none pointer-events-none"
+    src={questions[currentQuestion]?.img ?? '/favicon.ico'} // Fallback image URL
+    alt={``}
+    width={100}
+    height={100}
+    onError={(e) => (e.currentTarget.src = '/favicon.ico')} // Fallback image on error
+    layout="responsive"
+    placeholder="blur"
+    blurDataURL="/favicon.ico"
+    style={{ width: '100%', height: 'auto', maxWidth: '100%', maxHeight: '100%' }}
+  />
+</div>
+            </CardDescription>
+        </div>
       </div>
       <div className="w-full flex items-start justify-start mx-[30px] mr-[30px] ">
         <NavigationPanel />
