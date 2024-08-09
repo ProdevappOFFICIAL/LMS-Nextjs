@@ -6,13 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-<<<<<<< HEAD
     "lint": "next lint",
-    "tauri": "tauri"
-
-=======
     "lint": "next lint"
->>>>>>> 7d4c14c44095801220e0b1345120507eff79a13b
   },
   "dependencies": {
     "@clerk/nextjs": "^4.29.3",
